@@ -1,4 +1,4 @@
-#!/home/dennis/Dev/eecs/399/env/bin/python
+#!/home/dennis/Dev/eecs/399/travel/env/bin/python
 # EASY-INSTALL-ENTRY-SCRIPT: 'pip==1.1','console_scripts','pip'
 __requires__ = 'pip==1.1'
 import sys
