@@ -13,12 +13,12 @@ def rank(request):
         score = r['relevance']
         for rlist in relevance_lists:
             try:
-                score = score * rlist.get(concept=r['concept'])
+                score = score * rlist.get(concept=r['concept']).relevance
             except:
                 pass
         
         if score:
-            final_scores.append({ 'concept': r['concept'],
+            final_scores.append({ 'location': r['location'],
                                   'score': score })
     
     sorted_scores = sorted(final_scores, key=lambda k: k['score'])
