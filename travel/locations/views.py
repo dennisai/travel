@@ -1,8 +1,13 @@
+from django.shortcuts import render_to_response
 from django.http import HttpResponse
 from django.utils import simplejson
 from locations.models import Relevance
 
-def rank(request):
+def search(request):
+    if not request.is_ajax():
+        return render_to_response("search.html", {},
+            RequestContext(request))
+            
     relevance_lists = []
     final_scores = []
     for q in request.GET:
